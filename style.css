@@ -31,6 +31,7 @@ a {
   grid-template-rows: repeat(7, 1fr);
   gap: 0.5em;
   z-index: 1;
+  text-align: center;
 }
 
 header {
@@ -47,8 +48,15 @@ h2 {
 
 div  {
   color: var(--primary);
-  
 
+}
+
+.clickables {
+  cursor: pointer;
+}
+
+p {
+  padding: 0.5em;
 }
 
 #t1 {
@@ -85,7 +93,7 @@ div  {
 
 .contactLinks, .hidden {
     display: none;
-    
+   
 }
 
 
@@ -107,6 +115,7 @@ div  {
   grid-column: 4 / span 1;
   grid-row: 3 / span 1;
   border: 3px solid ;
+  
 }
 
 #t6 {
@@ -145,11 +154,19 @@ div  {
   grid-row: 4 / span 1;
   border: 3px solid ;
 }
+
+#pomodoroText, #textLogoText, #aframeGameText {
+  display: none;
+}
+
 #t9 {
   grid-column: 3 / span 1;
   grid-row: 4 / span 1;
   border: 3px solid ;
 }
+
+
+
 
 #t10 {
   grid-column: 4 / span 1;
@@ -157,6 +174,7 @@ div  {
   border: 3px solid ;
   
 }
+
 
 
 #t11 {
@@ -186,6 +204,9 @@ footer {
 
 /* phone style*/ 
 @media screen and (max-width: 620px) {
+  .grid {
+    text-align: start;
+  }
 
   .displayingAbout {
     background-color: red;
@@ -195,6 +216,17 @@ footer {
   
   }
 
+  .displayingContacts {
+    background-color: aqua;
+    z-index: 3;
+    height: 200%;
+    
+  }
+  
+
+  p {
+    padding: 0em;
+  }
   
 
   
