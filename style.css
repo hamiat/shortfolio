@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
     --primary: black;
     --secondary: orange;
@@ -32,6 +34,7 @@ a {
   gap: 0.5em;
   z-index: 1;
   text-align: center;
+  
 }
 
 header {
@@ -48,7 +51,12 @@ h2 {
 
 div  {
   color: var(--primary);
-
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .clickables {
@@ -57,7 +65,55 @@ div  {
 
 p {
   padding: 0.5em;
+  font-family: 'Roboto', sans-serif;
+  
 }
+
+
+.contactLinks, #aboutText, #pomodoroText, #textLogoText, #aframeGameText, #gameHowTo {
+  display: none;
+  animation:  fade-in 2s;
+ 
+}
+
+
+@keyframes fade-in {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes getBigger {
+  0% {transform: scale(1);}
+  50% {transform: scale(2);}
+  100% {transform: scale(0.5);}
+}
+
+
+
+@keyframes changeColors {
+  0% {background-color: rgb(22, 19, 241);}
+  25% {background-color: rgb(223, 13, 13);}
+  50% {background-color: rgb(17, 224, 35);}
+  75% {background-color: rgb(241, 36, 173);}
+  100% {background-color: rgb(233, 248, 16);}
+}
+
+kbd {
+  background-color: #eee;
+  border-radius: 3px;
+  border: 1px solid #b4b4b4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+  color: #333;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+  white-space: nowrap;
+ }
+
+
+
 
 #t1 {
   grid-column: 3 / span 1;
@@ -83,17 +139,6 @@ p {
   grid-column: 3 / span 1;
   grid-row: 3 / span 1;
   border: 3px solid ;
-}
-
-#t4 p {
-    display: none;
-}
-
-
-
-.contactLinks, .hidden {
-    display: none;
-   
 }
 
 
@@ -135,7 +180,7 @@ p {
 
 .projects:hover  {
     background: linear-gradient(331deg, rgb(255, 244, 234) 0%, #ffffff 96%);
-    animation:slideBox 1s linear ;
+    animation:slideBox 1s linear alternate infinite ;
 
 }
 
@@ -144,6 +189,7 @@ p {
   to {
     background-position:20vw;
     transform: rotate(10deg);
+    
   }
 }
 
@@ -155,9 +201,6 @@ p {
   border: 3px solid ;
 }
 
-#pomodoroText, #textLogoText, #aframeGameText {
-  display: none;
-}
 
 #t9 {
   grid-column: 3 / span 1;
@@ -198,21 +241,24 @@ p {
 }
 
 footer {
-  grid-column: 4 / span 2;
+  grid-column: 3 / span 2;
   grid-row: 7;
+  font-size: 1.2em;
+  text-align: end;
+  font-weight: 600;
+  
 }
 
-/* phone style*/ 
-@media screen and (max-width: 620px) {
-  .grid {
-    text-align: start;
-  }
 
+/* phone style*/ 
+@media screen and (max-width: 810px) {
+ 
   .displayingAbout {
     background-color: red;
     z-index: 3;
     width: 215%;
     height: 200%;
+    
   
   }
 
@@ -223,11 +269,23 @@ footer {
     
   }
   
+  div {
+    padding: 0.5em;
+  }
 
   p {
     padding: 0em;
+    font-size: 1em;
+  }
+
+  .projects p {
+    font-size: 0.8em;
+    margin-top: 0.3em;
   }
   
+  #gameHowTo {
+    display: none;
+  }
 
   
 
