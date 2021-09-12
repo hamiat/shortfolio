@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400&family=Roboto&display=swap');
 :root {
     --primary: black;
-    --secondary: orange;
+    --secondary: rgb(255, 115, 0);
 
 }
 
@@ -25,6 +24,8 @@ color: var(--secondary);
 a {
     text-decoration: none;
     color: var(--secondary);
+    font-family: 'Roboto', sans-serif;
+    
 }
 
 .grid {
@@ -42,10 +43,15 @@ header {
   grid-row: 1;
   margin: 3em 0;
   font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  
 }
 h2 {
     color: var(--secondary);
     cursor: pointer;
+    font-family: 'Crimson Pro', serif;
+    
+    
 }
 
 
@@ -56,6 +62,7 @@ div  {
   align-content: center;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   
 }
 
@@ -65,7 +72,7 @@ div  {
 
 p {
   padding: 0.5em;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Crimson Pro', serif;
   
 }
 
@@ -75,6 +82,9 @@ p {
   animation:  fade-in 2s;
  
 }
+
+
+
 
 
 @keyframes fade-in {
@@ -141,6 +151,12 @@ kbd {
   border: 3px solid ;
 }
 
+#t4 p {
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+}
+
 
 
 .contactLinks a {
@@ -148,7 +164,10 @@ kbd {
     display: flex;
     justify-content: space-around;
     padding: 0.2em;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-top: 10px;
+  
+
 }
 
 .contactLinks a:hover {
@@ -177,6 +196,9 @@ kbd {
   border-top: 3px solid ;
 }
 
+.projects a {
+  font-family: 'Crimson Pro', serif;
+}
 
 .projects:hover  {
     background: linear-gradient(331deg, rgb(255, 244, 234) 0%, #ffffff 96%);
@@ -238,6 +260,7 @@ kbd {
   grid-row: 5 / span 1;
   border-left: 3px solid ;
   border-top: 3px solid ;
+  display: grid;
 }
 
 footer {
@@ -245,7 +268,8 @@ footer {
   grid-row: 7;
   font-size: 1.2em;
   text-align: end;
-  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+
   
 }
 
@@ -253,21 +277,45 @@ footer {
 /* phone style*/ 
 @media screen and (max-width: 810px) {
  
-  .displayingAbout {
-    background-color: red;
-    z-index: 3;
-    width: 215%;
-    height: 200%;
-    
-  
+  body {
+    color: rgb(255, 136, 0);
   }
-
+  .displayingAbout {
+    background-color: #ffffff;
+    z-index: 3;
+    width: 170%;
+    max-width: 215%;
+    max-height: 180%;
+    
+    
+ 
+  }
+  
   .displayingContacts {
     background-color: aqua;
     z-index: 3;
-    height: 200%;
+    max-height: 160%;
+height: 100%;
     
   }
+
+
+  .displayingAbout p, .contactLinks {
+margin: 15px 0;
+  }
+
+  .displayingAbout p {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+   h2 {
+    font-size: 1.3em;
+  }
+
+
   
   div {
     padding: 0.5em;
@@ -275,7 +323,7 @@ footer {
 
   p {
     padding: 0em;
-    font-size: 1em;
+    font-size: 1.3em;
   }
 
   .projects p {
@@ -287,6 +335,8 @@ footer {
     display: none;
   }
 
-  
+  footer {
+      font-size: 1em;
+  }
 
 }

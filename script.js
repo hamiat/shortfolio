@@ -12,15 +12,20 @@ const pomodoroText = document.getElementById("pomodoroText");
 const textLogoText = document.getElementById("textLogoText");
 const gameHowTo = document.getElementById("gameHowTo");
 
+
+
 t4Box.addEventListener("click", () => {
   t4Box.classList.add("displayingAbout");
   aboutText.style.display = "block";
+  document.getElementById('aboutH2').style.fontSize = "2em"
+  
 });
 
 t5Box.addEventListener("click", () => {
   t5Box.classList.add("displayingContacts");
   contactLinks.style.display = "grid";
   contactLinks.style.fontSize = "0.7em";
+  document.getElementById('contactH2').style.fontSize = "1.8em"
 });
 
 t8Box.addEventListener("mouseenter", () => {
@@ -42,11 +47,10 @@ t10Box.addEventListener("mouseenter", () => {
   } else {
     gameHowTo.style.display = "block";
     gameHowTo.style.width = "200%";
-    gameHowTo.style.textAlign = "start";
+    gameHowTo.style.textAlign = "flex-end";
     gameHowTo.style.fontSize = "1.3em";
   }
   aframeGameText.style.display = "block";
-  aframeGameText.style.width = "100%";
   aframeGameText.style.textAlign = "start";
   aframeGameText.style.fontSize = "1.3em";
 });
@@ -56,6 +60,8 @@ const hideStuff = () => {
   aboutText.style.display = "none";
   t4Box.classList.remove("displayingAbout");
   t5Box.classList.remove("displayingContacts");
+  document.getElementById('aboutH2').style.fontSize = "1.3em"
+  document.getElementById('contactH2').style.fontSize = "1.3em"
 };
 
 window.addEventListener("mousedown", hideStuff);
