@@ -24,7 +24,7 @@ a {
     text-decoration: none;
     color: var(--secondary);
     font-family: 'Roboto', sans-serif;
-    
+    z-index: 5;
 }
 
 .grid {
@@ -164,7 +164,7 @@ kbd {
   font-size: 1.3em;
 }
 
-#t4:hover, #t5:hover {
+#t4:hover, #t5:hover{
   background-color: var(--secondary);
   transition: all 0.3s ease;
 }
@@ -220,13 +220,15 @@ kbd {
   font-family: 'Crimson Pro', serif;
 }
 
-.projects a:hover  {
-  color: rgb(255, 38, 0);
+.projects:hover a  {
+  color: var(--primary)
 }
 
-.projects:hover  {
-    background: linear-gradient(331deg, rgb(255, 244, 234) 0%, #ffffff 96%);
+.projects:hover   {
+  background-color: var(--secondary);
     animation:slideBox 1s linear alternate infinite ;
+    color: var(--primary);
+
 
 }
 
@@ -307,8 +309,8 @@ footer {
   .displayingAbout {
     background-color: #ffffff;
     z-index: 3;
-    width: 200%;
-    max-width: 215%;
+    width: 190%;
+    max-width: 200%;
     max-height: 180%;
     
     
