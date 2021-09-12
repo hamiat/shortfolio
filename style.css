@@ -18,7 +18,6 @@ body {
   font-family: monospace;
 color: var(--secondary);
 
-
 }
 
 a {
@@ -54,6 +53,10 @@ h2 {
     
 }
 
+h1, footer {
+  font-family: 'Crimson Pro', serif;
+}
+
 
 div  {
   color: var(--primary);
@@ -68,7 +71,10 @@ div  {
 
 .clickables {
   cursor: pointer;
+ 
 }
+
+
 
 p {
   padding: 0.5em;
@@ -149,6 +155,7 @@ kbd {
   grid-column: 3 / span 1;
   grid-row: 3 / span 1;
   border: 3px solid ;
+  z-index: 2;
 }
 
 #t4 p {
@@ -157,6 +164,19 @@ kbd {
   font-size: 1.3em;
 }
 
+#t4:hover, #t5:hover {
+  background-color: var(--secondary);
+  transition: all 0.3s ease;
+}
+
+
+#t4:hover h2, #t5:hover h2{
+  
+  color: var(--primary);
+
+}
+
+
 
 
 .contactLinks a {
@@ -164,14 +184,14 @@ kbd {
     display: flex;
     justify-content: space-around;
     padding: 0.2em;
-    font-size: 1.5em;
+    font-size: 1.6em;
     margin-top: 10px;
   
 
 }
 
 .contactLinks a:hover {
-    color: var(--secondary);
+    color: #ffffff;
 }
 
 
@@ -198,6 +218,10 @@ kbd {
 
 .projects a {
   font-family: 'Crimson Pro', serif;
+}
+
+.projects a:hover  {
+  color: rgb(255, 38, 0);
 }
 
 .projects:hover  {
@@ -266,9 +290,9 @@ kbd {
 footer {
   grid-column: 3 / span 2;
   grid-row: 7;
-  font-size: 1.2em;
+  font-size: 1.3em;
   text-align: end;
-  font-family: 'Roboto', sans-serif;
+ 
 
   
 }
@@ -292,7 +316,7 @@ footer {
   }
   
   .displayingContacts {
-    background-color: aqua;
+    background-color: #FFFFFF;
     z-index: 3;
     max-height: 160%;
 height: 100%;

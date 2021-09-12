@@ -17,7 +17,7 @@ const gameHowTo = document.getElementById("gameHowTo");
 t4Box.addEventListener("click", () => {
   t4Box.classList.add("displayingAbout");
   aboutText.style.display = "block";
-  document.getElementById('aboutH2').style.fontSize = "2em"
+  document.querySelector('.aboutH2').style.fontSize = "2em"
   
 });
 
@@ -25,7 +25,7 @@ t5Box.addEventListener("click", () => {
   t5Box.classList.add("displayingContacts");
   contactLinks.style.display = "grid";
   contactLinks.style.fontSize = "0.7em";
-  document.getElementById('contactH2').style.fontSize = "1.8em"
+  document.querySelector('.contactH2').style.fontSize = "1.8em"
 });
 
 t8Box.addEventListener("mouseenter", () => {
@@ -60,8 +60,8 @@ const hideStuff = () => {
   aboutText.style.display = "none";
   t4Box.classList.remove("displayingAbout");
   t5Box.classList.remove("displayingContacts");
-  document.getElementById('aboutH2').style.fontSize = "1.3em"
-  document.getElementById('contactH2').style.fontSize = "1.3em"
+  document.querySelector('.aboutH2').style.fontSize = "1.3em"
+  document.querySelector('.contactH2').style.fontSize = "1.3em"
 };
 
 window.addEventListener("mousedown", hideStuff);
