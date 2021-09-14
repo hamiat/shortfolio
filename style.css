@@ -213,7 +213,9 @@ kbd {
 }
 
 .projects:hover a  {
-  color: #575757
+  color: var(--primary);
+  text-shadow: 1px 1px #FF0000;
+  
 }
 
 .projects:hover   {
