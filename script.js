@@ -52,10 +52,16 @@ const forDesktop = () => {
 
 
 t9Box.addEventListener("mouseenter", () => {
-  textLogoText.style.display = "block";
-  textLogoText.style.textAlign = "start";
-  textLogoText.style.fontSize = "1.3em";
-  aframeGameText.style.display = "block";
+  const mediaQuery = window.matchMedia("(max-width: 810px)");
+  if (mediaQuery.matches) {
+    gameHowTo.style.display = "none";
+  } else {
+    textLogoText.style.display = "block";
+    textLogoText.style.textAlign = "start";
+    textLogoText.style.fontSize = "1.3em";
+    forDesktop()
+  }
+
  
 });
 
@@ -70,8 +76,9 @@ t10Box.addEventListener("mouseenter", () => {
     gameHowTo.style.width = "200%";
     gameHowTo.style.textAlign = "flex-end";
     gameHowTo.style.fontSize = "1.3em";
+    forDesktop()
   }
-  forDesktop()
+ 
 });
 
 t8Box.addEventListener("mouseleave", () => {
