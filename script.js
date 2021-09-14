@@ -44,11 +44,22 @@ t8Box.addEventListener("mouseenter", () => {
   pomodoroText.style.fontSize = "1.3em";
 });
 
+const forDesktop = () => {
+  aframeGameText.style.display = "block";
+  aframeGameText.style.textAlign = "start";
+  aframeGameText.style.fontSize = "1.3em";
+}
+
+
 t9Box.addEventListener("mouseenter", () => {
   textLogoText.style.display = "block";
   textLogoText.style.textAlign = "start";
   textLogoText.style.fontSize = "1.3em";
+  aframeGameText.style.display = "block";
+ 
 });
+
+
 
 t10Box.addEventListener("mouseenter", () => {
   const mediaQuery = window.matchMedia("(max-width: 810px)");
@@ -60,9 +71,7 @@ t10Box.addEventListener("mouseenter", () => {
     gameHowTo.style.textAlign = "flex-end";
     gameHowTo.style.fontSize = "1.3em";
   }
-  aframeGameText.style.display = "block";
-  aframeGameText.style.textAlign = "start";
-  aframeGameText.style.fontSize = "1.3em";
+  forDesktop()
 });
 
 t8Box.addEventListener("mouseleave", () => {
@@ -71,6 +80,7 @@ t8Box.addEventListener("mouseleave", () => {
 
 t9Box.addEventListener("mouseleave", () => {
   textLogoText.style.display = "none";
+  aframeGameText.style.display = "none";
 });
 
 t10Box.addEventListener("mouseleave", () => {
